@@ -6,6 +6,16 @@
                 <div class="card-body p-4">
                     <form action="<?= base_url('topup'); ?>" method="post">
                         <ul class="list-group list-group-flush">
+                            <li class="list-group-item bg-dark text-white text-start">Transaction Name :
+                                <br />
+                                <input type="text" name="name" id="name" class="form-control edit-input mt-2 bg-transparent text-white" />
+                                <?= form_error('name', '<small class="text-danger">', '</small>'); ?>
+                            </li>
+                            <li class="list-group-item bg-dark text-white text-start">Transaction Description :
+                                <br />
+                                <textarea name="description" id="description" class="form-control edit-input mt-2 bg-transparent text-white" rows="5"></textarea>
+                                <?= form_error('description', '<small class="text-danger">', '</small>'); ?>
+                            </li>
                             <li class="list-group-item bg-dark text-white text-start">Amount :
                                 <br />
                                 <input type="text" name="amount" id="amount" class="form-control edit-input mt-2 bg-transparent text-white" />

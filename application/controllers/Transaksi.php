@@ -26,7 +26,7 @@ class Transaksi extends CI_Controller
             'Description',
             'trim|required|min_length[3]|max_length[255]',
             [
-                'required' => 'Nama transaksi wajib di-isi!',
+                'required' => 'Deskripsi transaksi wajib di-isi!',
                 'min_length' => 'Deskripsi transaksi minimal berisi 3 karakter!',
                 'max_length' => 'Deskripsi transaksi maksimal berisi 255 karakter!',
             ]
