@@ -133,6 +133,10 @@ class Transaksi extends CI_Controller
 			$this->form_validation->set_message('amount_check_transfer', "Minimal jumlah transfer adalah 10.000!");
 			return false;
 		}
+		if ($value > $this->session->userdata('ballance')) {
+			$this->form_validation->set_message('amount_check_transfer', "Ballance/saldo tidak mencukupi!");
+			return false;
+		}
 		return true;
 	}
 
@@ -198,5 +202,25 @@ class Transaksi extends CI_Controller
 			$this->load->view('pages/dashboard/transaction/expense-list', $data);
 		}
 		$this->load->view('template/footer');
+	}
+	
+	public function download_income_data()
+	{
+		if (!$this->session->userdata('email')) {
+			redirect(base_url("login"));
+		} else {
+			$data['income_transactions'] = $this->Transaksi_model->get_incomes();
+			$this->load->view('pages/dashboard/transaction/incomes-table', $data);
+		}
+	}
+
+	public function download_expense_data()
+	{
+		if (!$this->session->userdata('email')) {
+			redirect(base_url("login"));
+		} else {
+			$data['expense_transactions'] = $this->Transaksi_model->get_expenses();
+			$this->load->view('pages/dashboard/transaction/expenses-table', $data);
+		}
 	}
 }

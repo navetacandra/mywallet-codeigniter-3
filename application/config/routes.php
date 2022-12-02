@@ -68,3 +68,5 @@ $route['income-list'] = 'Transaksi/income_list';
 $route['expense-list'] = 'Transaksi/expense_list';
 $route['download-income-invoice-pdf/(:any)'] = 'Transaksi/download_income_invoice_pdf/$1';
 $route['download-expense-invoice-pdf/(:any)'] = 'Transaksi/download_expense_invoice_pdf/$1';
+$route['download-expenses-data'] = 'Transaksi/download_expense_data';
+$route['download-incomes-data'] = 'Transaksi/download_income_data';
