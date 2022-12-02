@@ -28,7 +28,7 @@
                             <?= form_error('password', '<small class="text-danger">', '</small>'); ?>
                         </div>
                         <div class="mb-3 text-end">
-                            <button type="submit" class="btn btn-danger text-uppercase">login</button>
+                            <button type="submit" class="btn btn-primary text-uppercase">login</button>
                         </div>
                     </form>
                     <hr />
