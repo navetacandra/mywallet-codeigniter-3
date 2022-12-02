@@ -64,9 +64,18 @@ $route['edit-profile'] = 'User/edit';
 // Transaksi
 $route['topup'] = 'Transaksi/topup';
 $route['transfer'] = 'Transaksi/transfer';
+// -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- //
 $route['income-list'] = 'Transaksi/income_list';
 $route['expense-list'] = 'Transaksi/expense_list';
+// -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- //
+$route['print-income-invoice/(:any)'] = 'Transaksi/print_income_invoice/$1';
+$route['print-expense-invoice/(:any)'] = 'Transaksi/print_expense_invoice/$1';
+// -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- //
 $route['download-income-invoice-pdf/(:any)'] = 'Transaksi/download_income_invoice_pdf/$1';
 $route['download-expense-invoice-pdf/(:any)'] = 'Transaksi/download_expense_invoice_pdf/$1';
+// -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- //
+$route['print-expenses-data'] = 'Transaksi/print_expense_data';
+$route['print-incomes-data'] = 'Transaksi/print_income_data';
+// -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- //
 $route['download-expenses-data'] = 'Transaksi/download_expense_data';
 $route['download-incomes-data'] = 'Transaksi/download_income_data';

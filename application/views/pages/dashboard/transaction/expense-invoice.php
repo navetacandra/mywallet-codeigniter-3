@@ -47,7 +47,9 @@
     <script>
         let doc = new jsPDF('p', 'pt', 'a4');
 
-        doc.addHTML(document.querySelector("body"), function() {
+        doc.addHTML(document.querySelector("body"), {
+            pagesplit: true
+        }, function() {
             doc.save('invoice.pdf');
             window.location.href = "<?= base_url("expense-list") ?>";
         });

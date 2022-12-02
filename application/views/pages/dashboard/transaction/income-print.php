@@ -44,14 +44,23 @@
     <script src="<?= base_url('assets/js/jquery.min.js'); ?>"></script>
     <script src="<?= base_url('assets/js/html2canvas.js'); ?>"></script>
     <script src="<?= base_url('assets/js/jspdf.min.js'); ?>"></script>
+    <script src="<?= base_url('assets/js/print.js'); ?>"></script>
     <script>
         let doc = new jsPDF('p', 'pt', 'a4');
 
         doc.addHTML(document.querySelector("body"), {
             pagesplit: true
         }, function() {
-            doc.save('invoice.pdf');
-            window.location.href = "<?= base_url("income-list") ?>";
+            let base64 = doc.output('datauristring');
+            document.querySelector("body").style.display = "none";
+            printJS({
+                printable: base64.replace("data:application/pdf;base64,", ""),
+                type: "pdf",
+                base64: true
+            });
+            window.onfocus = () => {
+                window.location.href = "<?= base_url("income-list") ?>";
+            }
         });
     </script>
 </body>

@@ -45,6 +45,15 @@
                             <div class="col-4">
                                 <div class="d-flex justify-content-end">
                                     <div class="text-center col ms-5" style="height: 1rem; margin-top: 1rem;">
+                                        <a class="text-decoration-none text-center text-white" href="<?= base_url("print-incomes-data") ?>">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="1.4rem" height="1.4rem" fill="#3bef2b" class="bi bi-printer" viewBox="0 0 16 16">
+                                                <path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z" />
+                                                <path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2H5zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4V3zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2H5zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1z" />
+                                            </svg>
+                                            <p class="fs-6 text-center" style="color: #3bef2b;">Print</p>
+                                        </a>
+                                    </div>
+                                    <div class="text-center col ms-1" style="height: 1rem; margin-top: 1rem;">
                                         <a class="text-decoration-none text-center text-white" href="<?= base_url("download-incomes-data") ?>">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" fill="#3bef2b" class="bi bi-download" viewBox="0 0 16 16">
                                                 <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
@@ -111,6 +120,15 @@
                             <div class="col-4">
                                 <div class="d-flex justify-content-end">
                                     <div class="text-center col ms-5" style="height: 1rem; margin-top: 1rem;">
+                                        <a class="text-decoration-none text-center text-white" href="<?= base_url("print-expenses-data") ?>">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="1.4rem" height="1.4rem" fill="#3bef2b" class="bi bi-printer" viewBox="0 0 16 16">
+                                                <path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z" />
+                                                <path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2H5zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4V3zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2H5zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1z" />
+                                            </svg>
+                                            <p class="fs-6 text-center" style="color: #3bef2b;">Print</p>
+                                        </a>
+                                    </div>
+                                    <div class="text-center col ms-1" style="height: 1rem; margin-top: 1rem;">
                                         <a class="text-decoration-none text-center text-white" href="<?= base_url("download-expenses-data") ?>">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" fill="#3bef2b" class="bi bi-download" viewBox="0 0 16 16">
                                                 <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />

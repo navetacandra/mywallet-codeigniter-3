@@ -158,25 +158,6 @@ class Transaksi extends CI_Controller
 		return true;
 	}
 
-	public function download_income_invoice_pdf($id)
-	{
-		if (!$this->session->userdata('email')) {
-			redirect(base_url("login"));
-		} else {
-			$data['income_transactions'] = $this->Transaksi_model->get_income_by_id($id);
-			$this->load->view('pages/dashboard/transaction/income-invoice', $data);
-		}
-	}
-
-	public function download_expense_invoice_pdf($id)
-	{
-		if (!$this->session->userdata('email')) {
-			redirect(base_url("login"));
-		} else {
-			$data['expense_transactions'] = $this->Transaksi_model->get_expense_by_id($id);
-			$this->load->view('pages/dashboard/transaction/expense-invoice', $data);
-		}
-	}
 
 	public function income_list()
 	{
@@ -203,14 +184,14 @@ class Transaksi extends CI_Controller
 		}
 		$this->load->view('template/footer');
 	}
-	
+
 	public function download_income_data()
 	{
 		if (!$this->session->userdata('email')) {
 			redirect(base_url("login"));
 		} else {
 			$data['income_transactions'] = $this->Transaksi_model->get_incomes();
-			$this->load->view('pages/dashboard/transaction/incomes-table', $data);
+			$this->load->view('pages/dashboard/transaction/incomes-table-all', $data);
 		}
 	}
 
@@ -220,7 +201,68 @@ class Transaksi extends CI_Controller
 			redirect(base_url("login"));
 		} else {
 			$data['expense_transactions'] = $this->Transaksi_model->get_expenses();
-			$this->load->view('pages/dashboard/transaction/expenses-table', $data);
+			$this->load->view('pages/dashboard/transaction/expenses-table-all', $data);
+		}
+	}
+
+	public function print_income_data()
+	{
+		if (!$this->session->userdata('email')) {
+			redirect(base_url("login"));
+		} else {
+			$data['income_transactions'] = $this->Transaksi_model->get_incomes();
+			$this->load->view('pages/dashboard/transaction/incomes-print-all', $data);
+		}
+	}
+
+	public function print_expense_data()
+	{
+		if (!$this->session->userdata('email')) {
+			redirect(base_url("login"));
+		} else {
+			$data['expense_transactions'] = $this->Transaksi_model->get_expenses();
+			$this->load->view('pages/dashboard/transaction/expenses-print-all', $data);
+		}
+	}
+	
+
+	public function download_income_invoice_pdf($id)
+	{
+		if (!$this->session->userdata('email')) {
+			redirect(base_url("login"));
+		} else {
+			$data['income_transactions'] = $this->Transaksi_model->get_income_by_id($id);
+			$this->load->view('pages/dashboard/transaction/income-invoice', $data);
+		}
+	}
+
+	public function download_expense_invoice_pdf($id)
+	{
+		if (!$this->session->userdata('email')) {
+			redirect(base_url("login"));
+		} else {
+			$data['expense_transactions'] = $this->Transaksi_model->get_expense_by_id($id);
+			$this->load->view('pages/dashboard/transaction/expense-invoice', $data);
+		}
+	}
+
+	public function print_income_invoice($id)
+	{
+		if (!$this->session->userdata('email')) {
+			redirect(base_url("login"));
+		} else {
+			$data['income_transactions'] = $this->Transaksi_model->get_income_by_id($id);
+			$this->load->view('pages/dashboard/transaction/income-print', $data);
+		}
+	}
+
+	public function print_expense_invoice($id)
+	{
+		if (!$this->session->userdata('email')) {
+			redirect(base_url("login"));
+		} else {
+			$data['expense_transactions'] = $this->Transaksi_model->get_expense_by_id($id);
+			$this->load->view('pages/dashboard/transaction/expense-print', $data);
 		}
 	}
 }
