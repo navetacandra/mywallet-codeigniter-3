@@ -8,13 +8,13 @@
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item bg-dark text-white text-start">Recipient :
                                 <br />
-                                <input type="text" name="name" id="name" value="<?= set_value("name") ?>" class="form-control edit-input mt-2 bg-transparent text-white" />
-                                <?= form_error('name', '<small class="text-danger">', '</small>'); ?>
+                                <input type="text" name="recipient" id="recipient" value="<?= set_value("recipient") ?>" class="form-control edit-input mt-2 bg-transparent text-white" placeholder="Enter recipient ID" />
+                                <?= form_error('recipient', '<small class="text-danger">', '</small>'); ?>
                             </li>
                             <li class="list-group-item bg-dark text-white text-start">Message :
                                 <br />
-                                <textarea name="description" id="description" class="form-control edit-input mt-2 bg-transparent text-white" rows="5"><?= set_value('description') ?></textarea>
-                                <?= form_error('description', '<small class="text-danger">', '</small>'); ?>
+                                <textarea name="message" id="message" class="form-control edit-input mt-2 bg-transparent text-white" rows="5"><?= set_value('message') ?></textarea>
+                                <?= form_error('message', '<small class="text-danger">', '</small>'); ?>
                             </li>
                             <li class="list-group-item bg-dark text-white text-start">Amount :
                                 <br />

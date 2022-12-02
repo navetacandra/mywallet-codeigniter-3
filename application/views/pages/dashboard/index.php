@@ -30,14 +30,31 @@
             <div class="mb-3">
                 <div class="card bg-dark text-white user-card shadow-lg">
                     <div class="card-body">
-                        <div class="d-flex mb-2">
-                            <a href="<?= base_url("income-list") ?>" class="text-white text-decoration-none">
-                                <h3 class="card-title me-2">Incomes</h3>
-                            </a>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1.8rem" height="1.8rem" fill="#0D6EFD" class="bi bi-box-arrow-in-down-left" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M9.636 2.5a.5.5 0 0 0-.5-.5H2.5A1.5 1.5 0 0 0 1 3.5v10A1.5 1.5 0 0 0 2.5 15h10a1.5 1.5 0 0 0 1.5-1.5V6.864a.5.5 0 0 0-1 0V13.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z" />
-                                <path fill-rule="evenodd" d="M5 10.5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 0-1H6.707l8.147-8.146a.5.5 0 0 0-.708-.708L6 9.293V5.5a.5.5 0 0 0-1 0v5z" />
-                            </svg>
+                        <div class="d-flex">
+                            <div class="col-8">
+                                <div class="d-flex">
+                                    <a href="<?= base_url("income-list") ?>" class="text-white text-decoration-none">
+                                        <h3 class="card-title me-2">Incomes</h3>
+                                    </a>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.8rem" height="1.8rem" fill="#0D6EFD" class="bi bi-box-arrow-in-down-left" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M9.636 2.5a.5.5 0 0 0-.5-.5H2.5A1.5 1.5 0 0 0 1 3.5v10A1.5 1.5 0 0 0 2.5 15h10a1.5 1.5 0 0 0 1.5-1.5V6.864a.5.5 0 0 0-1 0V13.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z" />
+                                        <path fill-rule="evenodd" d="M5 10.5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 0-1H6.707l8.147-8.146a.5.5 0 0 0-.708-.708L6 9.293V5.5a.5.5 0 0 0-1 0v5z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="d-flex justify-content-end">
+                                    <div class="text-center col ms-5" style="height: 1rem; margin-top: 1rem;">
+                                        <a class="text-decoration-none text-center text-white" href="<?= base_url("download-incomes-data") ?>">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" fill="#3bef2b" class="bi bi-download" viewBox="0 0 16 16">
+                                                <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                                                <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                                            </svg>
+                                            <p class="fs-6 text-center" style="color: #3bef2b;">Excel</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="mt-2 ms-2">
                             <h4><?= count($income_transactions); ?></h4>
@@ -79,14 +96,31 @@
             <div class="mb-3">
                 <div class="card bg-dark text-white user-card shadow-lg">
                     <div class="card-body">
-                        <div class="d-flex mb-2">
-                            <a href="<?= base_url("expense-list") ?>" class="text-white text-decoration-none">
-                                <h3 class="card-title me-2">Expenses</h3>
-                            </a>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height="1.5rem" fill="#0D6EFD" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z" />
-                                <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
-                            </svg>
+                        <div class="d-flex">
+                            <div class="col-8">
+                                <div class="d-flex">
+                                    <a href="<?= base_url("expense-list") ?>" class="text-white text-decoration-none">
+                                        <h3 class="card-title me-2">Expenses</h3>
+                                    </a>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height="1.5rem" fill="#0D6EFD" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z" />
+                                        <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="d-flex justify-content-end">
+                                    <div class="text-center col ms-5" style="height: 1rem; margin-top: 1rem;">
+                                        <a class="text-decoration-none text-center text-white" href="<?= base_url("download-expenses-data") ?>">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" fill="#3bef2b" class="bi bi-download" viewBox="0 0 16 16">
+                                                <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                                                <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                                            </svg>
+                                            <p class="fs-6 text-center" style="color: #3bef2b;">Excel</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="mt-2 ms-2">
                             <h4><?= count($expense_transactions); ?></h4>
