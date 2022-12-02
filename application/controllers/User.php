@@ -25,11 +25,12 @@ class User extends CI_Controller
         $this->form_validation->set_rules(
             'nomor',
             'Telepon',
-            'trim|required|min_length[10]|max_length[13]',
+            'trim|required|min_length[10]|max_length[13]|is_unique[user.nomor]',
             [
                 'required' => 'Nomor telepon wajib di-isi!',
                 'min_length' => 'Nomor telepon minimal berisi 10 karakter!',
-                'max_length' => 'Nomor telepon maksimal berisi 11 karakter!'
+                'max_length' => 'Nomor telepon maksimal berisi 13 karakter!',
+                'is_unique' => 'Nomor telepon sudah digunakan pengguna lain!',
             ]
         );
         if ($this->form_validation->run() == FALSE) {

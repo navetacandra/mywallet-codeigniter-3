@@ -64,12 +64,21 @@
                             Top Up
                         </span>
                     </a>
+                    <a class="bg-transparent text-white border-0 list-group-item py-3 offcanvas-link" href="<?= base_url('transfer'); ?>">
+                        <span class="align-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#ffffff" class="me-2" viewBox="0 0 16 16">
+                                <path d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
+                                <path d="M0 4a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V6a2 2 0 0 1-2-2H3z" />
+                            </svg>
+                            Transfer
+                        </span>
+                    </a>
                     <a class="bg-transparent text-white border-0 list-group-item py-3 offcanvas-link" href="<?= base_url('income-list'); ?>">
                         <span class="align-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#ffffff" class="me-2" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M9.636 2.5a.5.5 0 0 0-.5-.5H2.5A1.5 1.5 0 0 0 1 3.5v10A1.5 1.5 0 0 0 2.5 15h10a1.5 1.5 0 0 0 1.5-1.5V6.864a.5.5 0 0 0-1 0V13.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z" />
-                            <path fill-rule="evenodd" d="M5 10.5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 0-1H6.707l8.147-8.146a.5.5 0 0 0-.708-.708L6 9.293V5.5a.5.5 0 0 0-1 0v5z" />
-                        </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#ffffff" class="me-2" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M9.636 2.5a.5.5 0 0 0-.5-.5H2.5A1.5 1.5 0 0 0 1 3.5v10A1.5 1.5 0 0 0 2.5 15h10a1.5 1.5 0 0 0 1.5-1.5V6.864a.5.5 0 0 0-1 0V13.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z" />
+                                <path fill-rule="evenodd" d="M5 10.5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 0-1H6.707l8.147-8.146a.5.5 0 0 0-.708-.708L6 9.293V5.5a.5.5 0 0 0-1 0v5z" />
+                            </svg>
                             Incomes List
                         </span>
                     </a>

@@ -21,6 +21,12 @@ class Transaksi_model extends CI_Model
             "amount" => $amount,
         ];
         $this->db->insert("transaksi", $data);
+        $this->db->from("user");
+        $this->db->where("user_id", $user_id);
+        $current_ballance = $this->db->get()->row_array()["ballance"];
+        $this->db->set("ballance", $current_ballance + $amount);
+        $this->db->where("user_id", $user_id);
+        $this->db->update("user");
     }
 
     public function get_incomes() {
@@ -30,6 +36,28 @@ class Transaksi_model extends CI_Model
         $this->db->where('user_id', $user_id);
         $this->db->where('category_id', '1');
         $result = $this->db->get()->result_array();
+        return $result;
+    }
+
+    public function get_income_by_id($id) {
+        $user_id = $this->session->userdata('user_id');
+        $this->db->select('*');
+        $this->db->from('transaksi');
+        $this->db->where('user_id', $user_id);
+        $this->db->where('id', $id);
+        $this->db->where('category_id', '1');
+        $result = $this->db->get()->result_array()[0];
+        return $result;
+    }
+
+    public function get_expense_by_id($id) {
+        $user_id = $this->session->userdata('user_id');
+        $this->db->select('*');
+        $this->db->from('transaksi');
+        $this->db->where('user_id', $user_id);
+        $this->db->where('id', $id);
+        $this->db->where('category_id', '2');
+        $result = $this->db->get()->result_array()[0];
         return $result;
     }
     

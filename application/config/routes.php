@@ -63,5 +63,8 @@ $route['edit-profile'] = 'User/edit';
 
 // Transaksi
 $route['topup'] = 'Transaksi/topup';
+$route['transfer'] = 'Transaksi/transfer';
 $route['income-list'] = 'Transaksi/income_list';
 $route['expense-list'] = 'Transaksi/expense_list';
+$route['download-income-invoice-pdf/(:any)'] = 'Transaksi/download_income_invoice_pdf/$1';
+$route['download-expense-invoice-pdf/(:any)'] = 'Transaksi/download_expense_invoice_pdf/$1';

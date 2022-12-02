@@ -16,7 +16,8 @@ class Auth extends CI_Controller
         }
     }
 
-    public function index() {
+    public function index()
+    {
         $this->cek_user();
         $this->form_validation->set_rules(
             'email',
@@ -132,21 +133,23 @@ class Auth extends CI_Controller
         );
         $this->form_validation->set_rules(
             'nomor',
-            'nomorepon',
-            'trim|required|min_length[10]|max_length[13]',
+            'nomor_telepon',
+            'trim|required|min_length[10]|max_length[13]|is_unique[user.nomor]',
             [
-                'required' => 'Nomor nomorepon wajib di-isi!',
-                'min_length' => 'Nomor nomorepon minimal berisi 10 karakter!',
-                'max_length' => 'Nomor nomorepon maksimal berisi 11 karakter!'
+                'required' => 'Nomor telepon wajib di-isi!',
+                'min_length' => 'Nomor telepon minimal berisi 10 karakter!',
+                'max_length' => 'Nomor telepon maksimal berisi 13 karakter!',
+                'is_unique' => 'Nomor telepon sudah digunakan pengguna lain!',
             ]
         );
         $this->form_validation->set_rules(
             'email',
             'Email',
-            'trim|required|valid_email',
+            'trim|required|valid_email|is_unique[user.email]',
             [
                 'required' => 'Email wajib di-isi!',
-                'valid_email' => 'Email tidak valid!'
+                'valid_email' => 'Email tidak valid!',
+                'is_unique' => 'Email sudah digunakan pengguna lain!',
             ]
         );
         $this->form_validation->set_rules(
